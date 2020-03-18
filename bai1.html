@@ -9,14 +9,12 @@
 <button onclick="displayPrime()">Show</button>
 <p id="1" ></p>
 <script>
-    let count=0;
     function displayPrime(){
         let Num =Number(document.getElementById("number").value);
         let N=2;
-        while(count<Num){
+        while(N<Num){
             let a=checkPrimeNumber(N);
             if(a===true){
-                count++;
                 document.getElementById("1").innerHTML+= N +";&nbsp";
             }
             N++;
