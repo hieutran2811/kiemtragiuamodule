@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="number">nhap vao mot so </label><input type="number" name="number" id="number">
+<button onclick="displayPrime()">Show</button>
+<p id="1" ></p>
+<script>
+    let count=0;
+    function displayPrime(){
+        let Num =Number(document.getElementById("number").value);
+        let N=2;
+        while(count<Num){
+            let a=checkPrimeNumber(N);
+            if(a===true){
+                count++;
+                document.getElementById("1").innerHTML+= N +";&nbsp";
+            }
+            N++;
+        }
+    }
+    function checkPrimeNumber(N) {
+        let m=0;
+        if(N===2){
+            return true;
+        }else
+            for(let i=2;i<N;i++){
+                if((N%i)===0){
+                    m++ ;
+                }
+
+            }
+            if( m ===0){
+                return true;
+            }
+    }
+</script>
+</body>
+</html>

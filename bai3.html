@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x;
+    let today;
+    today = new Date().getFullYear();
+    let namsinh=Number(prompt("nhập vào năm sinh của bạn: "));
+    let y =calculateAge(namsinh);
+    document.write("số tuổi của bạn là: "+y);
+    function calculateAge(namsinh) {
+        if (namsinh>today){
+            alert("năm sinh không hợp lệ");
+        }
+         x = today-namsinh;
+        return x;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1=[[1,2,3,4],[5,6,7,8],[2,4,7,4],[3,9,8,5]];
+    let sum=0;
+    let x;
+    x=sumDiagonalLineOfSquareMatrix(arr1);
+    document.write("tổng đường chéo ma trận vuông là :"+x);
+    function sumDiagonalLineOfSquareMatrix(arr) {
+        for(let i=0;i<arr.length;i++){
+            for(let j=0;j<arr[i].length;j++){
+                if(i===j){
+                    sum+=arr[i][j];
+
+                }
+            }
+        }
+        return sum;
+
+    }
+</script>
+</body>
+</html>
